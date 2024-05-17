@@ -28,23 +28,23 @@ y = "Hello, Python learners!"
 
 # Assignment 1: Create two variables, one holding a number and the other holding your name. Then print both.
 # Write your code below:
-age = 22
-name = "Ibrahim bin Karim"
+age = 25
+name = "Choyon Barua"
 
-# print("Age: ", age, end="; ")
-# print("Name: ", name)
+print("Age: ", age)
+print("Name: ", name)
 
 # Section 2: Data Types
 # ---------------------
 # Python has various data types including integers, float (decimal numbers), strings, booleans, and more.
 
 # Example 2: Data Types
-a = 5               # int
-b = 3.14            # float
-c = "Python"        # str
-d = True            # bool
+# a = 5               
+# b = 3.14            
+# c = "Python"        
+# d = True            
 
-# You can check the type of any variable by using the type() function.
+
 # print(type(a))
 # print(type(b))
 # print(type(c))
@@ -52,6 +52,20 @@ d = True            # bool
 
 # Assignment 2: Create variables of different types and use the type() function to check their types.
 # Write your code below:
+a = 42
+b = 2.718
+c = "Choyon"
+d = False
+
+type_a = type(a)    # <cls 'int'>
+type_b = type(b)    # <cls 'float'>
+type_c = type(c)    # <cls 'str'>
+type_d = type(d)    # <cls 'bool'>
+
+print(type_a)
+print(type_b)
+print(type_c)
+print(type_d)
 
 
 # Section 3: Variable Naming Conventions and Industry Standards
@@ -73,7 +87,11 @@ _bad_name = 23
 
 # Assignment 3: Fix the bad variable name above and create three more variables with good naming practices.
 # Write your code below:
+age = 23
 
+current_year = 2024
+average_score = 88.5
+user_email = "user@example.com"
 
 # Section 4: Python's Dynamic Typing
 # ----------------------------------
@@ -91,6 +109,11 @@ print(var)
 # Assignment 4: Create a variable, assign it a value of one type, then reassign it to a different type and print both.
 # Write your code below:
 
+variable = 100
+print(f'variable = {variable}, type = {type(variable)}')
+
+variable = "Choyon"
+print(f'variable = "{variable}", type = {type(variable)}')
 
 # Congratulations on completing this part of the Python workshop!
 # Review the assignments, try to solve them, and check your understanding of variables and data types.

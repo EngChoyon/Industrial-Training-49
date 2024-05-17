@@ -81,6 +81,7 @@ for item, quantity in inventory.items():
 # Assignments
 # -----------
 # Assignment 1: Write a script that processes a list of temperature readings. If any temperature is above a certain threshold, print a warning.
+
 temperatures = [22, 35, 28, 31, 40]
 threshold = 30
 for temp in temperatures:
@@ -88,6 +89,7 @@ for temp in temperatures:
         print(f"Warning: Temperature {temp} exceeds threshold of {threshold} degrees.")
 
 # Assignment 2: Given a list of users with their subscription status, write a loop that sends an email to all subscribed users.
+
 users = [{"email": "user1@example.com", "subscribed": True},
          {"email": "user2@example.com", "subscribed": False},
          {"email": "user3@example.com", "subscribed": True}]
@@ -171,6 +173,7 @@ for row in matrix:
 # Assignments
 # -----------
 # Assignment 1: Create a script that processes a dictionary of products, checking stock levels and generating restock alerts if necessary.
+
 products = {
     "laptop": {"stock": 4, "min_required": 10},
     "smartphone": {"stock": 15, "min_required": 5}

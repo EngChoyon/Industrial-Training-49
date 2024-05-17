@@ -64,6 +64,63 @@ print("Dictionary Copy: ", dict_copy)
 # Write your code below:
 
 
+student = {
+    "name": "Choyon Barua",
+    "roll_number": "C193040",
+    "grades": [
+        {"subject": "Math", "marks": 85},
+        {"subject": "English", "marks": 90},
+        {"subject": "Science", "marks": 88},
+        {"subject": "History", "marks": 92}
+    ]
+}
+
+print("Student Dictionary:")
+print(student)
+
+print("\nAccessing Individual Details:")
+print(f"Name: {student['name']}")
+print(f"Roll Number: {student['roll_number']}")
+
+print("\nGrades:")
+for grade in student['grades']:
+    print(f"Subject: {grade['subject']}, Marks: {grade['marks']}")
+
+
+print("Initial Student Dictionary:")
+print(student)
+
+new_subject = {"subject": "Art", "marks": 95}
+student["grades"].append(new_subject)
+
+student["age"] = 20
+
+print("\nAfter Adding New Elements:")
+print(student)
+
+subject_to_remove = "Science"
+student["grades"] = [grade for grade in student["grades"] if grade["subject"] != subject_to_remove]
+
+del student["age"]
+
+print("\nAfter Removing Elements:")
+print(student)
+
+# Modifying marks for an existing subject
+subject_to_modify = "Math"
+new_marks = 89
+for grade in student["grades"]:
+    if grade["subject"] == subject_to_modify:
+        grade["marks"] = new_marks
+
+# Modifying an existing key-value pair
+student["name"] = "Raihan Faruk Miheen"
+
+print("\nAfter Modifying Elements:")
+print(student)
+
+
+
 # Section 2: Integrating Dictionaries with Lists and Tuples
 # ---------------------------------------------------------
 # Dictionaries can be used with lists and tuples to create complex data structures.
@@ -85,6 +142,23 @@ coordinates_info = {(35.6895, 139.6917): "Tokyo", (40.7128, -74.0060): "New York
 
 # Assignment 2: Create a dictionary where keys are student names and values are lists of grades. Calculate the average grade for each student.
 # Write your code below:
+
+
+students_grades = {
+    "Choyon": [85, 92, 78, 90],
+    "Rajesh": [89, 76, 84, 91],
+    "Rohit": [92, 87, 85, 90],
+    "Prashanta": [78, 81, 86, 80],
+    "Pranta": [91, 89, 85, 92]
+}
+
+average_grades = {}
+for student, grades in students_grades.items():
+    average_grades[student] = sum(grades) / len(grades)
+
+print("Average Grades for Each Student:")
+for student, average in average_grades.items():
+    print(f"{student}: {average:.2f}")
 
 
 # Congratulations on completing the advanced section on Python dictionaries!

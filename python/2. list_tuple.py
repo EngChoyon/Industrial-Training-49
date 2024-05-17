@@ -73,6 +73,31 @@ list_length = len(simple_list)
 # Assignment 1: Create a 2D list representing a 3x3 matrix and perform operations like accessing, modifying, and iterating through it.
 # Write your code below:
 
+mat = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ]
+
+
+print("Accessing elements:")
+print(f'Element at (0, 0): {mat[0][0]}')
+print(f'Element at (1, 1): {mat[1][1]}')
+print(f'Element at (2, 2): {mat[2][2]}')
+
+
+print("\nModifying elements:")
+mat[0][0] = 10
+mat[1][1] = 50
+mat[2][2] = 90
+
+print(f'New element at (0, 0): {mat[0][0]}')
+print(f'New element at (1, 1): {mat[1][1]}')
+print(f'New element at (2, 2): {mat[2][2]}')
+
+
+print("\nIterating through the matrix:")
+for row in mat:
+    for element in row:
+        print(element, end=' ')
+    print()
+
 
 # Section 2: Python Tuples
 # ------------------------
@@ -97,6 +122,46 @@ tuple_dict = {simple_tuple: "My Tuple"}
 # Write your code below:
 
 
+mixed_tuple = (42, "Choyon", 3.14, True)
+print("Mixed Tuple:", mixed_tuple)
+
+points = {
+    (0, 0): "Origin",
+    (1, 2): "Point A",
+    (2, 3): "Point B"
+}
+
+print("\nDictionary with tuple keys:")
+print(f"Value at (0, 0): {points[(0, 0)]}")
+print(f"Value at (1, 2): {points[(1, 2)]}")
+
+points[(3, 4)] = "Point C"
+print(f"Value at (3, 4): {points[(3, 4)]}")
+
+print("\nIterating through the dictionary:")
+for key, value in points.items():
+    print(f"Key: {key}, Value: {value}")
+
+students = {
+    1: ("Choyon", 20, "Computer Science"),
+    2: ("Rohit", 21, "Mathematics"),
+    3: ("Rajesh", 19, "Physics")
+}
+
+
+print("\nDictionary with tuple values:")
+student_id = 2
+name, age, major = students[student_id]
+print(f"Student ID: {student_id}, Name: {name}, Age: {age}, Major: {major}")
+
+
+print("\nIterating through the dictionary:")
+for student_id, details in students.items():
+    name, age, major = details
+    print(f"Student ID: {student_id}, Name: {name}, Age: {age}, Major: {major}")
+
+
+
 # Section 3: Advanced Applications
 # --------------------------------
 # Dealing with more complex list and tuple structures for real-world applications.
@@ -115,6 +180,16 @@ incremented_matrix = [[cell + 1 for cell in row] for row in matrix]
 
 # Assignment 3: Create a list of tuples, where each tuple contains a student's name and their grade. Sort this list by grades.
 # Write your code below:
+
+
+students_grades = [ ("Rajesh", 88), ("Prashanta", 75), ("Choyon", 95), ("Pranta", 82), ("Rohit", 91) ]
+
+sorted_students_grades = sorted(students_grades, key=lambda student: student[1])
+
+print("Sorted list by grades:")
+for student in sorted_students_grades:
+    print(student)
+
 
 
 # Congratulations on completing the advanced section on Python lists and tuples!

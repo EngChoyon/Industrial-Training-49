@@ -90,7 +90,55 @@ with open('users.json', 'r') as file:
 # Assignments
 # -----------
 # Assignment 1: Write a script that reads a CSV file containing product information and converts it into a JSON file.
+
+
+# id,name,price,quantity
+# 1,Apple,0.50,100
+# 2,Banana,0.30,150
+# 3,Orange,0.80,200
+
+import csv
+import json
+
+def csv_to_json(csv_file_path, json_file_path):
+    with open(csv_file_path, mode='r', newline='', encoding='utf-8') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        
+        data = [row for row in csv_reader]
+
+    with open(json_file_path, mode='w', encoding='utf-8') as json_file:
+        json.dump(data, json_file, indent=4)
+
+csv_file_path = 'products.csv'
+json_file_path = 'products.json'
+
+csv_to_json(csv_file_path, json_file_path)
+
+print(f"CSV data has been successfully converted to JSON and saved to {json_file_path}.")
+
+
 # Assignment 2: Create a log file writer that appends log messages to a file with timestamps.
+
+
+import datetime
+
+def write_log(log_file_path, message):
+    current_time = datetime.datetime.now()
+    timestamp = current_time.strftime('%Y-%m-%d %H:%M:%S')
+    
+    log_message = f"{timestamp} - {message}\n"
+    
+    with open(log_file_path, 'a') as log_file:
+        log_file.write(log_message)
+
+log_file_path = 'application.log'
+
+write_log(log_file_path, "Application started")
+write_log(log_file_path, "Performing some tasks")
+write_log(log_file_path, "Application finished")
+
+print(f"Log messages have been written to {log_file_path}.")
+
 
 # Congratulations on completing the comprehensive section on Python file I/O and JSON handling!
 # Review the assignments, try to solve them, and check your understanding of file operations and data formats.

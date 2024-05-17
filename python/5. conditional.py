@@ -48,6 +48,20 @@ else:
 # Write your code below:
 
 
+def determine_number_type(number):
+    if number > 0:
+        return "The number is positive."
+    elif number < 0:
+        return "The number is negative."
+    else:
+        return "The number is zero."
+
+number = float(input("Enter a number: "))
+result = determine_number_type(number)
+
+print(result)
+
+
 # Section 2: Logical and Boolean Operations
 # -----------------------------------------
 # Logical operators (and, or, not) are used to combine conditional statements.
@@ -69,6 +83,23 @@ else:
 
 # Assignment 2: Create a script that checks if a person is eligible for a senior citizen discount based on age and residency.
 # Write your code below:
+
+
+def is_eligible_for_senior_discount(age, is_resident):
+    if age >= 65 and is_resident:
+        return "The person is eligible for a senior citizen discount."
+    else:
+        return "The person is not eligible for a senior citizen discount."
+
+age = int(input("Enter the person's age: "))
+residency_status = input("Is the person a resident? (yes/no): ").strip().lower()
+
+is_resident = residency_status == "yes"
+
+result = is_eligible_for_senior_discount(age, is_resident)
+
+print(result)
+
 
 
 # Section 3: Real-World Applications
@@ -96,6 +127,23 @@ print(f"Ticket price: ${price}")
 # Assignment 3: Write a script that simulates a basic login system. Check username and password correctness.
 # Write your code below:
 
+
+correct_username = "admin"
+correct_password = "password123"
+
+def login_system():
+    username = input("Enter your username: ").strip()
+
+    password = input("Enter your password: ").strip()
+
+    if username == correct_username and password == correct_password:
+        return "Login successful!"
+    else:
+        return "Login failed. Incorrect username or password."
+
+result = login_system()
+
+print(result)
 
 
 # Example 7: Loan Approval System
@@ -146,7 +194,8 @@ print(f"Total shipping cost: ${shipping_cost:.2f}")
 
 # Assignment 4: Implement a system that categorizes a day based on temperature and weather conditions.
 # Use nested if-elif-else and logical operators to determine if it's a beach day, skiing day, or a stay-home day.
-temperature = 30  # in Celsius
+
+temperature = 30
 weather = "sunny"
 
 if weather == "sunny":

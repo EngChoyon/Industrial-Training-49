@@ -61,6 +61,25 @@ print(user_input.lstrip())  # Removes leading whitespace
 # Write your code below:
 
 
+bio_data = "Name: Choyon, Age: 25, Country: Canada"
+
+name_start = bio_data.find("Name: ") + len("Name: ")
+name_end = bio_data.find(", Age: ")
+name = bio_data[name_start:name_end]
+
+age_start = bio_data.find("Age: ") + len("Age: ")
+age_end = bio_data.find(", Country: ")
+age = bio_data[age_start:age_end]
+
+country_start = bio_data.find("Country: ") + len("Country: ")
+country = bio_data[country_start:]
+
+print("Extracted Info:")
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Country: {country}")
+
+
 # Section 2: Advanced String Operations
 # -------------------------------------
 # Strings can be used in more complex operations like formatting.
@@ -78,6 +97,24 @@ print(old_greeting)
 
 # Assignment 2: Create a formatted string that includes data from a list or dictionary. For example, use a dictionary to store a person's information and format a string to include it.
 # Write your code below:
+
+
+person_info = {
+    "name": "Choyon",
+    "age": 25,
+    "country": "Canada",
+    "profession": "Software Engineer"
+}
+
+formatted_string = (
+    f"Name: {person_info['name']}\n"
+    f"Age: {person_info['age']}\n"
+    f"Country: {person_info['country']}\n"
+    f"Profession: {person_info['profession']}"
+)
+
+print("Formatted Bio Data:")
+print(formatted_string)
 
 
 # Section 3: Advanced Slicing and Multiline Strings
@@ -109,6 +146,26 @@ print(formatted_string)
 
 # Assignment 3: Write a function that takes a string and returns a dictionary with the counts of each character in the string.
 # Write your code below:
+
+
+def count_characters(input_string):
+    char_count = {}
+
+    for char in input_string:
+        if char in char_count:
+            char_count[char] += 1
+            
+        else:
+            char_count[char] = 1
+
+    return char_count
+
+
+input_string = "hello world"
+result = count_characters(input_string)
+
+print("Character counts in the string:")
+print(result)
 
 
 # Section 4: Regular Expressions

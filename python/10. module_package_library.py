@@ -81,7 +81,29 @@ print("Pip examples: See comments for usage.")
 # Assignments
 # -----------
 # Assignment 1: Create a simple package with at least two modules, each containing one function.
+
+
+
+
 # Assignment 2: Use pip to install any library that is new to you and write a small script to explore its functionality.
+
+#pip install pyttsx3
+
+import pyttsx3
+
+def text_to_speech(text):
+    engine = pyttsx3.init()
+
+    engine.setProperty('rate', 150)
+    engine.setProperty('volume', 0.9)
+
+    engine.say(text)
+
+    engine.runAndWait()
+
+text = "Hello, how are you? I hope you're doing well."
+text_to_speech(text)
+
 
 # Congratulations on completing the comprehensive section on Python's modules, packages, libraries, and pip!
 # Review the assignments, try to solve them, and check your understanding of these essential Python features.
